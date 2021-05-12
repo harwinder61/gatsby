@@ -1,0 +1,26 @@
+// Variables
+
+// Color overrides
+
+// Set a custom color
+$orange: #f4623a !default;
+$brown: #5c4d42 !default;
+$tan: #f4efe4 !default;
+$sky-blue: #cbe5e6 !default;
+$dark-blue: #052e4a !default;
+$yellow: #fbc736;
+$black: #000;
+// Set primary color to orange
+$primary: $black !default;
+
+// Font overrides
+$font-family-sans-serif: "Nanum Gothic", sans-serif !default;
+
+$font-family-serif: "Nanum Gothic", sans-serif !default;
+
+$font-family-base: $font-family-serif !default;
+
+$headings-font-family: $font-family-sans-serif !default;
+
+// Custom variables
+$navbar-height: 72px;
