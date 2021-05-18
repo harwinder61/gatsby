@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "gatsby"
 
 const HeaderHome = () => {
+  const [showModel, setShowMode  ] = useState(false)
 
   return (
     <>
@@ -118,7 +119,7 @@ const HeaderHome = () => {
                 </div>
                 <div className="site-header-right">
                   <div className="site-header-item site-header-search">
-                    <span className="h-btn-search">
+                    <span className="h-btn-search" onClick={() => setShowMode(true)}>
                       <i className="flaticon3 flaticon3-search-icon"></i>
                     </span>
                   </div>
@@ -135,6 +136,17 @@ const HeaderHome = () => {
         </div>
       </header>{" "}
       
+      <div onClick={() => setShowMode(false)} className={showModel ? "cms-modal cms-modal-search open" : "cms-modal cms-modal-search"}>
+            <div className="cms-modal-close" onClick={() => setShowMode(false)} >x</div>
+            <div className="cms-modal-content">
+                <form role="search" method="get" className="search-form-popup" action="http://localhost/wordpress/">
+                    <div className="searchform-wrap">
+                        <input type="text" placeholder="Type Words Then Enter" id="search" name="s" className="search-field"/>
+                        <button type="submit" className="search-submit"><i className="fa fa-search"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </>
   );
 };
