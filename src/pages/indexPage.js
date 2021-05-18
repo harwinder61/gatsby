@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { graphql, useStaticQuery } from "gatsby";
 // import Image from "gatsby-image";
 // import Carousel from "@brainhubeu/react-carousel";
@@ -80,6 +80,11 @@ const HR = styled.hr`
 
 const IndexPage = () => {
   const data = useStaticQuery(getImages);
+  const [accordionObject, setAccordionObject] = useState({
+    name: "expression",
+    value: true
+  })
+  
 console.log("data", data, HR)
   return (
     <Layout>
@@ -199,7 +204,7 @@ console.log("data", data, HR)
                                             data-element_type="widget"
                                             data-widget_type="cms_heading.default"
                                           >
-                                            <div className="elementor-widget-container">
+                                            <div className="elementor-widget-container heading-default-font">
                                               <div className="cms-heading-wrapper cms-heading-layout1 wow fadeInUp">
                                                 <div className="custom-subheading">
                                                   Welcome to Toddler Talk
@@ -231,15 +236,10 @@ console.log("data", data, HR)
                                                 id="cms_button-871cfa4"
                                                 className="cms-button-wrapper cms-button-layout1 wow fadeInUp"
                                               >
-                                                <a
-                                                  className="btn btn-primary hv-secondary"
-                                                  href="https://demo.cmssuperheroes.com/themeforest/kindori/classes-page/"
-                                                  target="_blank"
-                                                  rel="noreferrer"
-                                                >
-                                                  <span className="btn btn-primary hv-secondary">
-                                                    Start today{" "}
-                                                  </span>
+                                               <a class="btn btn-primary hv-secondary" href="https://demo.cmssuperheroes.com/themeforest/kindori/classes-page/" target="_blank">
+             
+                                                            <span class="btn-text">
+                                                Start today                </span>
                                                 </a>
                                               </div>
                                             </div>
@@ -1154,6 +1154,10 @@ console.log("data", data, HR)
                                             <div
                                               className="cms-ac-title active"
                                               data-target="/fb147ddcms_accordion-25742d5"
+                                              onClick={() =>setAccordionObject({
+                                                name: "expression",
+                                                value: accordionObject.name === "expression" ? !accordionObject.value : true
+                                              })}
                                             >
                                               <span className="image-icon">
                                                 <img
@@ -1172,7 +1176,7 @@ console.log("data", data, HR)
                                             <div
                                               id="fb147ddcms_accordion-25742d5"
                                               className="cms-ac-content"
-                                              style={{ display: "block" }}
+                                              style={{ display: accordionObject.name === "expression" && accordionObject.value ? "block" : "none" }}
                                             >
                                               Expression includes all of the
                                               ways your child tells you about
@@ -1187,6 +1191,10 @@ console.log("data", data, HR)
                                             <div
                                               className="cms-ac-title "
                                               data-target="/89e6b88cms_accordion-25742d5"
+                                              onClick={() =>setAccordionObject({
+                                                name: "comprehension",
+                                                value: accordionObject.name === "comprehension" ? !accordionObject.value : true
+                                              })}
                                             >
                                               <span className="image-icon">
                                                 <img
@@ -1205,6 +1213,8 @@ console.log("data", data, HR)
                                             <div
                                               id="89e6b88cms_accordion-25742d5"
                                               className="cms-ac-content"
+                                              style={{ display: accordionObject.name === "comprehension" && accordionObject.value ? "block" : "none" }}
+
                                             >
                                               Comprehension refers to what your
                                               child understands. What words do
@@ -1219,6 +1229,11 @@ console.log("data", data, HR)
                                             <div
                                               className="cms-ac-title "
                                               data-target="/979d89ecms_accordion-25742d5"
+                                              onClick={() =>setAccordionObject({
+                                                name: "speech",
+                                                value: accordionObject.name === "speech" ? !accordionObject.value : true
+                                              })}
+                                           
                                             >
                                               <span className="image-icon">
                                                 <img
@@ -1237,6 +1252,8 @@ console.log("data", data, HR)
                                             <div
                                               id="979d89ecms_accordion-25742d5"
                                               className="cms-ac-content"
+                                              style={{ display: accordionObject.name === "speech" && accordionObject.value ? "block" : "none" }}
+
                                             >
                                               Speech refers to the specific
                                               sounds a child makes (e.g., the
@@ -1249,6 +1266,10 @@ console.log("data", data, HR)
                                             <div
                                               className="cms-ac-title "
                                               data-target="/f9b277ecms_accordion-25742d5"
+                                              onClick={() =>setAccordionObject({
+                                                name: "readiness",
+                                                value: accordionObject.name === "readiness" ? !accordionObject.value : true
+                                              })}
                                             >
                                               <span className="image-icon">
                                                 <img
@@ -1267,6 +1288,8 @@ console.log("data", data, HR)
                                             <div
                                               id="f9b277ecms_accordion-25742d5"
                                               className="cms-ac-content"
+                                              style={{ display: accordionObject.name === "readiness" && accordionObject.value ? "block" : "none" }}
+
                                             >
                                               Create an environment that
                                               supports learning. Support your

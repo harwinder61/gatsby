@@ -500,17 +500,17 @@ p {
   margin-bottom: 15px;
 }
 body {
-  background-color: #fff;
-  font-size: 15px;
-  line-height: 1.67;
-  color: #777;
+  background-color: #fff !important;
+  font-size: 15px !important;
+  line-height: 1.67 !important;
+  color: #777 !important;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  font-weight: normal;
-  letter-spacing: 0;
-  font-family: 'Prompt', sans-serif;
+  font-weight: normal !important;
+  letter-spacing: 0 !important;
+  font-family: 'Prompt', sans-serif !important;
 }
 body.body-default-font {
   font-family: Prompt;
@@ -2213,12 +2213,12 @@ form .select2-container--default .select2-selection .select2-selection__placehol
   display: block;
 }
 .btn, button, .button, input[type="submit"] {
-  background-color: #ff4880;
-  font-size: 15px;
-  color: #fff;
-  text-transform: capitalize;
-  padding: 0 26px;
-  line-height: 48px;
+  background-color: #ff4880 !important;
+  font-size: 15px !important;
+  color: #fff !important;
+  text-transform: capitalize !important;
+  padding: 0 26px !important;
+  line-height: 48px !important;
   -webkit-transition: all 300ms linear 0ms;
   -khtml-transition: all 300ms linear 0ms;
   -moz-transition: all 300ms linear 0ms;
@@ -2230,13 +2230,13 @@ form .select2-container--default .select2-selection .select2-selection__placehol
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-  border-radius: 10px;
-  position: relative;
-  display: inline-block;
-  text-align: center;
-  cursor: pointer;
-  font-weight: 700;
-  border: 1px solid #ff4880;
+  border-radius: 10px !important;
+  position: relative !important;
+  display: inline-block !important;
+  text-align: center !important;
+  cursor: pointer !important;
+  font-weight: 700 !important;
+  border: 1px solid #ff4880 !important;
 }
 .btn:hover, button:hover, .button:hover, input[type="submit"]:hover, .btn:focus, button:focus, .button:focus, input[type="submit"]:focus {
   -webkit-box-shadow: none;

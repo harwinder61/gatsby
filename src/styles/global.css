@@ -69,6 +69,11 @@
 /*--------------------------------------------------------------
 # Elementor
 --------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One');
+@import url('https://fonts.googleapis.com/css?family=Prompt');
+
+
 @-webkit-keyframes moveUp {
     100% {
       -webkit-transform: translateY(0);
@@ -510,6 +515,14 @@
     border: 1px solid #ff4880;
   }
   
+  .heading-default-font h1, .heading-default-font h2, .heading-default-font h3, .heading-default-font h4, .heading-default-font h5, .heading-default-font h6, .heading-default-font .h1, .heading-default-font .h2, .heading-default-font .h3, .heading-default-font .h4, .heading-default-font .h5, .heading-default-font .h6 {
+    font-family: 'Fredoka One', sans-serif;
+    font-weight: 400;
+}
+.custom-heading,.box-title{
+  font-family: 'Fredoka One', sans-serif;
+    font-weight: 400;
+}
 
   a {
     -webkit-transition: all 300ms linear 0ms;
